@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_app"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="#fff"
+    tools:context="com.example.yel.myqoutes.Fragments.aa_app_spinner">
+
+
+    <ImageView
+        android:id="@+id/imageDummy"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:background="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/txtdummy"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/imageDummy"
+        android:gravity="center_vertical"
+        android:text="dummy"
+        android:textColor="#000"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+</RelativeLayout>

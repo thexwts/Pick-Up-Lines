@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Pinoy Pick Up</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="categories">
+
+        <item>All</item>
+        <item>Best Pick Up Lines</item>
+        <item>Cheesy</item>
+        <item>Dota</item>
+        <item>New Tagalog</item>
+        <item>Sweet</item>
+        <item>Corny</item>
+        <item>Cute</item>
+        <item>Funny</item>
+        <item>Valentines</item>
+    </string-array>
+
+
+    <string-array name="favorite">
+
+        <item>Boy: I’m invisible. Can you see me? \nGirl: Nope, Why? \nBoy: How about tomorrow night?</item>
+        <item>Boy: I’m invisible. Can you see me? \nGirl: Nope, Why? \nBoy: How about tomorrow night?</item>
+        <item>Boy: I’m invisible. Can you see me? \nGirl: Nope, Why? \nBoy: How about tomorrow night?</item>
+        <item>Boy: I’m invisible. Can you see me? \nGirl: Nope, Why? \nBoy: How about tomorrow night?</item>
+        <item>Boy: I’m invisible. Can you see me? \nGirl: Nope, Why? \nBoy: How about tomorrow night?</item>
+
+    </string-array>
+</resources>
