@@ -2,14 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
-    tools:context="com.example.yel.myqoutes.Fragments.Category">
+    android:background="#f5f5f5"
+    tools:context=".Fragments.Main_Category">
 
     <RelativeLayout
         android:id="@+id/category_imagery_holder"
         android:layout_width="match_parent"
-        android:elevation="8dp"
-        android:layout_height="@dimen/imagery_holder_size">
+        android:layout_height="@dimen/imagery_holder_size"
+        android:background="#fff">
 
         <ImageView
             android:id="@+id/category_imagery"
@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="@drawable/text_protection1" />
+            android:background="@drawable/textprotector_v2" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="16dp"
-            android:text="Pick Up Lines"
+            android:text="Pinoy Pick Up Lines"
             android:textColor="#fff"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -42,7 +42,9 @@
         android:id="@+id/category_title_holder"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_below="@+id/category_imagery_holder">
+        android:layout_below="@+id/category_imagery_holder"
+        android:background="#fff"
+        android:elevation="4dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -50,7 +52,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             android:text="CATEGORY"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#212121"
             android:textSize="16sp"
             android:textStyle="bold" />
 

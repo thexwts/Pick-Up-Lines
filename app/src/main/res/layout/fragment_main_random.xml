@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Fragments.Main_Random">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/aa_app_toolbar" />
+
+
+    <RelativeLayout
+        android:id="@+id/random_content_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="36dp">
+
+        <ImageView
+            android:id="@+id/random_content_icon"
+            android:layout_width="165dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/menu_icon" />
+
+
+        <TextView
+            android:id="@+id/random_content_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/random_content_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="Best Lines"
+            android:textColor="#F57C00"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/random_content_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/random_content_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Boy: I’m invisible. Can you see me? \nGirl: Nope, Why? \nBoy: How about tomorrow night?"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/random_chooser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/random_nav_info"
+        android:layout_below="@+id/random_content_holder">
+
+        <Button
+            android:id="@+id/random_btn_reload"
+            android:layout_width="@dimen/reload_button_size"
+            android:layout_height="@dimen/reload_button_size"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/ctm_btn_reload" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/random_nav_info"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_alignParentBottom="true"
+        android:background="#e0e0e0"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:gravity="center" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/random_pageLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/random_pageOf"
+                android:text="209"
+                android:textColor="#212121"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/random_pageOf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=" of "
+                android:textColor="#212121"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/random_pageRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/random_pageOf"
+                android:text="242"
+                android:textColor="#212121"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/random_btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:text="SHARE"
+                android:textColor="#F57C00"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

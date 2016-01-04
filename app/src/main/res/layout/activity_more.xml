@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yel.myqoutes.Activity.Host.More">
+
+    <include
+        android:id="@+id/more_appBar"
+        layout="@layout/aa_app_toolbar_two" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/more_appBar"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/more_more_action"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3.5"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:text="Send feedback"
+                android:textColor="#212121"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="#757575" />
+
+        <LinearLayout
+            android:id="@+id/more_rate_action"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3.5"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:text="Rate this Application"
+                android:textColor="#212121"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="#757575" />
+
+
+        <LinearLayout
+            android:id="@+id/more_about_action"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3.5"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:text="About"
+                android:textColor="#212121"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="#757575" />
+
+    </LinearLayout>
+
+</RelativeLayout>

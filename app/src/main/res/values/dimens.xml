@@ -3,5 +3,5 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="imagery_holder_size">210dp</dimen>
-    <dimen name="reload_button_size">100dp</dimen>
+    <dimen name="reload_button_size">80dp</dimen>
 </resources>

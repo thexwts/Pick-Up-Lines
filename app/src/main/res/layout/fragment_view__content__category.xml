@@ -1,0 +1,183 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Fragments.View_Content_Category">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/category_nav_page">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/category_title"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@+id/category_title"
+            android:layout_toRightOf="@+id/category_title"
+            android:src="@drawable/category_i" />
+
+        <TextView
+            android:id="@+id/category_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/random_content_description"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:text="Best Lines"
+            android:textColor="#f57c00"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/random_content_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Boy: I’m invisible. Can you see me? \nGirl: Nope, Why? \nBoy: How about tomorrow night?"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/category_title"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/category_title"
+            android:layout_toStartOf="@+id/category_title"
+            android:src="@drawable/category_i" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/category_nav_page"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_above="@+id/category_divider"
+        android:background="#e0e0e0">
+
+
+        <TextView
+            android:id="@+id/category_left_page"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/category_of_page"
+            android:gravity="center"
+            android:text="209"
+            android:textColor="#212121"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/category_of_page"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text=" of "
+            android:textColor="#212121"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/category_right_page"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@+id/category_of_page"
+            android:gravity="center"
+            android:text="240"
+            android:textColor="#212121"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/category_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:text="SHARE"
+            android:textColor="#f57c00"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/category_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_above="@+id/category_navigation"
+        android:background="#e0e0e0" />
+
+    <LinearLayout
+        android:id="@+id/category_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+
+        <LinearLayout
+            android:id="@+id/category_navigation_qoutes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_keyboard_arrow_left_black_24dp"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/category_navigation_categories"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_synchronize"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/category_navigation_favorites"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_keyboard_arrow_right_black_24dp"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -4,6 +4,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,36 +18,36 @@ import com.example.yel.myqoutes.Others.My;
 import com.example.yel.myqoutes.R;
 
 
-public class Random extends Fragment {
+public class Main_Random extends Fragment {
 
-    private Button fav, share, reload;
+    private Button reload;
     private Spinner mySpinner;
-    private static boolean favClicked = true;
-    private static favoriteFunction function = new favoriteFunction();
     private static ArrayAdapter<String> adapter;
     private MyTypeface myTypeface;
     private TextView contentLines, contentTitle, contentPage;
+    private Toolbar toolbar;
+    private TextView share, titlebar;
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
         myTypeface = new MyTypeface();
         contentLines = (TextView) getActivity().findViewById(R.id.random_content_description);
-        contentPage = (TextView) getActivity().findViewById(R.id.random_content_page);
         contentTitle = (TextView) getActivity().findViewById(R.id.random_content_title);
-
-        myTypeface.whatTypeFace("robotocondensedregular.ttf");
+        myTypeface.whatTypeFace("kaushanregular.otf");
         contentLines.setTypeface(myTypeface.getTypeface());
-        contentPage.setTypeface(myTypeface.getTypeface());
-        myTypeface.whatTypeFace("robotocondensedbold.ttf");
-        contentTitle.setTypeface(myTypeface.getTypeface());
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_random, container, false);
+        View v = inflater.inflate(R.layout.fragment_main_random, container, false);
+        toolbar = (Toolbar) v.findViewById(R.id.toolbar);
+        titlebar = (TextView) v.findViewById(R.id.title_appbar);
+        titlebar.setText("Pinoy Pick Up Lines");
         mySpinner = (Spinner) v.findViewById(R.id.spinner);
         String[] data = v.getResources().getStringArray(R.array.categories);
         adapter = new ArrayAdapter<String>(getActivity(), R.layout.activity_aa_app_spinner, R.id.txtdummy, data);
@@ -66,8 +67,7 @@ public class Random extends Fragment {
 
         );
 
-        share = (Button) v.findViewById(R.id.random_btn_share);
-        fav = (Button) v.findViewById(R.id.random_btn_favorite);
+        share = (TextView) v.findViewById(R.id.random_btn_share);
         reload = (Button) v.findViewById(R.id.random_btn_reload);
         reload.setOnClickListener(new View.OnClickListener()
 
@@ -89,24 +89,7 @@ public class Random extends Fragment {
                                  }
 
         );
-        fav.setOnClickListener(new View.OnClickListener()
 
-                               {
-                                   @Override
-                                   public void onClick(View v) {
-                                       My.message(getActivity(), "Favorites");
-                                       if (!function.favoriteValue()) {
-                                           fav.setBackgroundResource(R.drawable.ctm_btn_favorite_pressed);
-                                           function.favoriteIsClicked(false);
-                                       } else {
-                                           fav.setBackgroundResource(R.drawable.ctm_btn_favorite);
-                                           function.favoriteIsClicked(true);//if it's clicked it will move to favoriteValue to give value before changing appearance
-
-                                       }
-                                   }
-                               }
-
-        );
         return v;
     }
 
@@ -134,6 +117,9 @@ public class Random extends Fragment {
             if ("robotocondensedregular.ttf".equals(type)) {
                 setTypeface(Typeface.createFromAsset(getResources().getAssets(), type));
             }
+            if ("papyrus.TTF".equals(type)) {
+                setTypeface(Typeface.createFromAsset(getResources().getAssets(), type));
+            }
 
         }
 
@@ -142,22 +128,6 @@ public class Random extends Fragment {
         }
 
 
-    }
-
-    private static class favoriteFunction {
-
-        public void favoriteIsClicked(boolean value) {//answer if it is clicked or not.
-            favClicked = value;
-        }
-
-        public boolean favoriteValue() {
-            if (favClicked) {
-                favClicked = false;
-            } else {
-                favClicked = true;
-            }
-            return favClicked;
-        }
     }
 
     @Override

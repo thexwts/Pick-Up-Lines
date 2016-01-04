@@ -4,17 +4,9 @@
     android:id="@+id/spinner_app"
     android:layout_width="match_parent"
     android:layout_height="48dp"
-    android:background="#fff"
+    android:background="#e0e0e0"
     android:elevation="6dp"
     tools:context="com.example.yel.myqoutes.Fragments.aa_app_spinner">
-
-    <ImageView
-        android:id="@+id/imageDummy"
-        android:layout_width="8dp"
-        android:layout_height="8dp"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="16dp"
-        android:background="@color/colorPrimary" />
 
     <TextView
         android:id="@+id/txtdummy"
@@ -22,7 +14,6 @@
         android:layout_height="48dp"
         android:layout_centerVertical="true"
         android:layout_marginLeft="16dp"
-        android:layout_toRightOf="@id/imageDummy"
         android:gravity="center_vertical"
         android:text="dummy"
         android:textColor="#212121"
